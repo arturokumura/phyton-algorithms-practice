@@ -16,5 +16,5 @@ else:
 
 total = valor - desconto
 
-print(f"Desconto: R$ {desconto} ")
+print(f"Desconto: R$ {desconto}")
 print(f"Total a pagar: R$ {total}")
