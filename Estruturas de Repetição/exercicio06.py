@@ -5,4 +5,4 @@ while ze < chico :
     chico += 2
     ze += 3
     n += 1
-print (n)    
+print(n)    
