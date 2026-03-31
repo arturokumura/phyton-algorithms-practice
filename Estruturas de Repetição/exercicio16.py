@@ -1,3 +1,35 @@
+# -----------------------------------------------------------
+# PROBLEMA: Cálculo de salários e estatísticas de operários
+# -----------------------------------------------------------
+#
+# Em uma fábrica existem operários divididos em 3 classes:
+#
+# Classe A: até 30 peças por mês
+# → recebe apenas o salário mínimo
+#
+# Classe B: de 31 a 35 peças
+# → salário mínimo + 3% do salário mínimo por peça acima de 30
+#
+# Classe C: mais de 35 peças
+# → salário mínimo + 5% do salário mínimo por peça acima de 30
+#
+# -----------------------------------------------------------
+# ENTRADAS:
+# - Número do operário (0 encerra o programa)
+# - Quantidade de peças produzidas no mês
+# - Sexo do operário (M ou F)
+#
+# -----------------------------------------------------------
+# SAÍDAS:
+# - Salário de cada operário
+# - Total da folha de pagamento
+# - Total de peças produzidas
+# - Média de peças dos homens por classe (A, B, C)
+# - Média de peças das mulheres por classe (A, B, C)
+# - Número do operário com maior salário (sem empate)
+#
+# -----------------------------------------------------------
+
 salario_minimo = 1621
 homens = 0
 mulheres = 0
