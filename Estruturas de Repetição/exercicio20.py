@@ -1,4 +1,4 @@
-#Dado um número inteiro de qualquer tamanho (inteiro longo), fornecido pelo
+##Dado um número inteiro de qualquer tamanho (inteiro longo), fornecido pelo
 #usuário via teclado, elabore um programa para determinar a soma dos dígitos que
 #forem pares.
 
