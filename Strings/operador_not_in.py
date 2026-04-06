@@ -1,3 +1,4 @@
+#Operador not_in
 texto = input("Digite um texto: ")
 vogais = "aeiouAEIOU"
 texto_sem_vogais = ""
