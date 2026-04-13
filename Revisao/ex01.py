@@ -2,7 +2,7 @@
 os caracteres iniciais com os finais, mantendo os caracteres em posições pares inalterados. Considere que a primeira
 letra da string está na posição 1. Exemplos: 123456789 → 927456381 e araraquara → rruraqaaaa
 '''
-'''     
+
 string = input("Informe a string: ")
 
 
@@ -26,17 +26,5 @@ for i in range(len(string)):
     else:
         resultado += string[i]
 
-print(resultado)'''
-
-'''
-2. Dada uma string de entrada, substitua todas as ocorrências da primeira letra pela segunda, todas da segunda pela
-terceira, e assim por diante até a última ser substituída pela primeira. '''
-
-s = input("Informe a string: ")
-resultado = ""
-
-
-for i in range(0, len(s)):
-    resultado += s[i] + s[i+1]
-    
 print(resultado)
+
