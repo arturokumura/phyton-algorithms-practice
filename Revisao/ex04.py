@@ -1,5 +1,5 @@
 '''Para uma string de entrada, substitua cada letra pelo seu "espelho" no alfabeto (por exemplo, 'a' → 'z', 'b' →
-'y', ..., 'z' → 'a').'''
+'y', ..., 'z' → 'a')'''
 s = input("Informe uma string: ")
 alfabeto = "abcdefghijklmnopqrstuvwxyz"
 alfabeto_invertido = ""
