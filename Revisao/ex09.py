@@ -19,7 +19,7 @@ for i in range(len(s)):
             if c == alfabeto[j]:
                 pos = j
         
-        # deslocamento correto (usar i!)
+        # deslocamento
         nova_pos = pos + i
         
         while nova_pos >= 26:
