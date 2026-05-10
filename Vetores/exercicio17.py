@@ -14,55 +14,158 @@ Digite a opção desejada: '''
 
 opcao  = 0
 agenda = []
-nome = []
-telefones = []
-contato = []
+
 while opcao != 6:
-    print("[1]- Incluir contato e telefone (pelo menos um telefone)")
-    print("[2]- Alterar um telefone de um contato (mostre as opções e o usuário digita qual será alterado")
-    print("[3]- Excluir um telefone de um contato (mostre as opções e o usuário digita qual será excluído")
-    print("[4]- Consultar os telefones de um contato (forma formatada")
+    print()
+    print("Agenda telefônica")
+    print()
+    print("[1]- Incluir contato e telefone")
+    print("[2]- Alterar um telefone de um contato")
+    print("[3]- Excluir um telefone de um contato")
+    print("[4]- Consultar os telefones de um contato (forma formatada)")
     print("[5]- Listar todos os contatos e seus respectivos telefones (forma formatada")
     print("[6]- FIM")
+    print()
     opcao = int(input("Informe uma opção: "))
 
-    #Opção 1
     if opcao == 1:
-        achou=False
-           
-        #inclui novo contato sem repetição
-        nome=input('Nome do Contato: ')
-     
-        #verifica se o nome já está na agenda
+        achou = False
+        nome = input("Nome: ")
+
+        #verificar se o nome ja existe:
         if len(agenda) != 0:
             for elemento in agenda:
                 if elemento[0] == nome:
-                    achou=True
-                        
-                        
-        #se o nome NÃO estiver na agenda
+                    print("Nome ja cadastrado")
+                    achou = True
         if not achou:
-            contato=[]
+            contato = []
             contato.append(nome)
+            
 
-            tel=input('Telefone: ')
+            #telefone
+            tel = input("Telefone: ")
             while tel == '':
-                tel=input('O contato precisa ter pelo menos um telefone!Digite novamente!\nTelefone: ')
-            telefones=[]
+                tel = input("Telefone inválido! Digite novamente: ")
+            telefones = []
             telefones.append(tel)
-            while tel != '':
-                tel=input('Telefone: ')
+            while tel != '' :
+                tel = input("Telefone: ")
                 if tel != '':
                     telefones.append(tel)
+                    
             contato.append(telefones)
-            print(f'Contato : {contato}')
             agenda.append(contato)
-        else:
-            print('Contato já cadastrado!')
-                
-        #para conferir
-        print(f'Agenda: {agenda}')
+            print(f"Contato: {contato}")
+            print(f"Agenda:{agenda}")
 
-
-   
+    if opcao == 2:
+        achou = False
+        nome = input("Qual contato será alterado? ")
         
+        for elemento in agenda:
+            if elemento[0] == nome:
+                contato_mod = elemento
+                achou = True
+                
+                #Print dos telefones
+                telefones = []
+                for tel in contato_mod[1]:
+                    telefones.append(tel)
+                    print(tel)
+                
+                #Alterar telefone
+                encontrou_tel = False
+                while not encontrou_tel:
+                   alterar = input("Informe o telefone a ser alterado: ")
+
+                # percorre todos os telefones
+                   for i in range(len(contato_mod[1])):
+                      if contato_mod[1][i] == alterar:
+                         ind = i             
+                         encontrou_tel = True
+
+                # se terminou o for e não encontrou, pede novamente
+                   if not encontrou_tel:
+                       print("Telefone não encontrado!")
+
+                
+                novo = input("Informe o novo telefone: ")
+                confirm = input(f"Confirmar a alteração de {contato_mod[1][i-1]} para {novo}? (s/n): ")
+                if confirm.lower() == 's':
+                    contato_mod[1][ind] = novo
+                else:
+                    print("Alteração cancelada")
+                print(agenda)
+                    
+        if not achou:
+            print("Contato não cadastrado! ")
+
+    #Opção 3
+    if opcao == 3:
+        achou = False
+        nome = input("Informe o contato em que deseja excluir o telefone: ")
+        for elemento in agenda:
+            if elemento[0] == nome:
+                contato = elemento
+                achou = True
+
+                #Printar telefones
+                telefones = []
+                for tel in contato[1]:
+                    telefones.append(tel)
+                    print(tel)
+
+                #Verificar se tem
+                tem = False
+                ind = 0
+                while not tem:
+                    excluido = input("Informe qual telefone excluir: ")
+                    for i in range(len(telefones)):
+                        if contato[1][i] == excluido:
+                            ind  = i
+                            tem = True
+
+                    if not tem:
+                        print("Telefone não encontrado!")
+                        
+                confirm = input(f"Confirmar a deleção do telefone {contato[1][ind]}? (s/n) ")
+                if confirm.lower() == "s":
+                    del contato[1][ind]
+                else:
+                    print("Alteração cancelada")
+                print(f"Agenda: {agenda}")
+
+        if not achou:
+           print("Contato não cadastrado!")
+
+   #Opção 4
+    if opcao == 4:
+        achou =  False
+        nome = input("Informe o contato: ")
+        for elemento in agenda:
+            if elemento[0] == nome:
+                contato = elemento
+                achou = True
+                telefones = ""
+                for tel in contato[1]:
+                    telefones += tel + " "
+                print(f"Contato: {nome}")
+                print(f"Telefones: {telefones}")
+
+        if not achou:
+            print("Contato não cadastrado")
+
+    #Opção 5
+    if opcao == 5:
+        for elemento in agenda:
+            print(elemento[0])
+            print(elemento[1])
+                
+                
+            
+            
+            
+        
+        
+       
