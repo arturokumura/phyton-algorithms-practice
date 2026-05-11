@@ -1,6 +1,11 @@
-def escreve_linha():
-    print("----------------------")
+def escreve_linha(n):
+    s = ""
+    for i in range(n):
+        s += "-"
+    return s
 
-escreve_linha()
+res = escreve_linha(3)
+print(res)
 print("Instituto Federal")
-escreve_linha()
+res = escreve_linha(3)
+print(res)
