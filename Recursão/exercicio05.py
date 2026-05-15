@@ -6,6 +6,6 @@ def contcaract(s):
     else:
         return 1 + contcaract(s[1:])
 
-print("-----------Contador de caractreres em uma string-----------")
+print("-----------Contador de caractreres em uma string----------")
 frase = input("Digite uma frase: ")
 print(contcaract(frase))
