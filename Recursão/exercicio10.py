@@ -1,10 +1,17 @@
-'''Faça uma função recursiva para retornar o produto dos elementos de uma lista
-de números inteiros;'''
-def prod(l):
+'''Faça uma função recursiva para contar a quantidade um determinado elemento
+em uma lista;'''
+def cont(l,c):
     if len(l) == 1:
-        return l[0]
+        if l[0] == c:
+            return 1
+        else:
+            return 0
     else:
-        return l[0] * prod(l[1:])
+        if l[0] == c:
+            return 1 + cont(l[1:],c)
+        else:
+            return cont(l[1:],c)
 
-lista = [1,2,3,4,5]
-print(prod(lista))
+lista =[1,2,2,2,3,4,5]
+elemento = 2
+print(cont(lista,elemento))
