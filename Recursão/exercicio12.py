@@ -1,5 +1,5 @@
 '''Faça uma função recursiva para retornar o produto dos elementos de uma lista
-de números inteiros;'''
+de números inteiros'''
 def prod(l):
     if len(l) == 1:
         return l[0]
