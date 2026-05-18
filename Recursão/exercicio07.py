@@ -7,6 +7,6 @@ def invert(num):
     else:
         print(num % 10)
         invert(num//10)
-print("------Numero-------")
+print("------Numero------")
 numero  = int(input("Informe o numero: "))
 invert(numero)
