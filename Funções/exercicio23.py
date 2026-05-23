@@ -20,6 +20,5 @@ def Real(n):
        elif c not in numeros and c != '.':
            return False
     return True
-
 num = input("Número: ")
 print(Real(num))
