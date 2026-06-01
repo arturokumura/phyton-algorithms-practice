@@ -65,7 +65,7 @@ print(notas)
 notas = {"Joao": [9.0,8.0], "Maria": [10.0]}
 for nome in notas:
     media = sum(notas[nome])/len(notas[nome])
-    print("A media de ", nome, "é : ", media)'''
+    print("A media de ", nome, "é : ", media)
 
 #Cadastro de pessoas
 cad_pessoa = {}
