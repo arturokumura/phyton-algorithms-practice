@@ -41,7 +41,7 @@ d2 = d1.copy()
 d2["Pedro"] = 30
 d1["Joao"] = 40
 print(d1)
-print(d2)'''
+print(d2)
 
 #Limpar
 idades =  {"Joao":10, "Maria":12}
@@ -54,4 +54,25 @@ idades = {}
 print("id(idades) após a reatribuição:", id(idades))
 print("Idades:", idades)
 print("idadesCriancas:", idadesCriancas)
+
+#Pop item
+notas = {"Joao": [9.0,8.0], "Maria": [10.0]}
+print(notas)
+print(notas.popitem())
+print(notas)
+
+#media
+notas = {"Joao": [9.0,8.0], "Maria": [10.0]}
+for nome in notas:
+    media = sum(notas[nome])/len(notas[nome])
+    print("A media de ", nome, "é : ", media)'''
+
+#Cadastro de pessoas
+cad_pessoa = {}
+cad_pessoa['4223323242']=('Maria Silva','09/07/1998','F','maria@gmail.com')
+#Update
+chave = '47177297811'
+tupla = ('Artur Okumura', '06/03/2001','M','artur@gmail.com')
+cad_pessoa['chave'] = tupla
+print(cad_pessoa)
 
