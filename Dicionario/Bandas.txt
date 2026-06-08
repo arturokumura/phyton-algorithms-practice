@@ -1,0 +1,4 @@
+Beatles*1960*John Lennon#Guitarra&Vocal$Paul McCartney#Baixo&Vocal$George Harrison#Guitarra$Ringo Starr#Bateria$
+Queen*1970*Freddie Mercury#Vocal$Brian May#Guitarra$Roger Taylor#Bateria$John Deacon#Baixo$
+Nirvana*1987*Kurt Cobain #Guitarra&Vocal$Krist Novoselic #Baixo$Dave Grohl #Bateria$
+DSE*2000*Artur#Baixo$
