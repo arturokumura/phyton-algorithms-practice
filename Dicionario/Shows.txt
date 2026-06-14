@@ -1,0 +1,4 @@
+Nirvana;MorumBis;20/12/2024;250.0;130000
+Beatles;Allianz Parque;15/01/2025;850.0;50000
+Queen;Neo Química Arena;05/02/2025;1000.0;20000
+Coldplay;MorumBis;12/12/2026;999.99;120000.0
